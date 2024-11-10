@@ -5,15 +5,16 @@
         let howMany;
         loop: for (let index = 0; index < array.length; index++) {
             const element = array[index];
-            if(2**index > array.length){
+            if(2**index >= array.length){
                 howMany = 2**index;
                 break loop;
             }
         }
-        if(array.lenght == 0){
-            howMany = 0;
-        }
-        return howMany;
+        if(array.length == 0){
+            return 0;
+        }else{
+            return howMany;
+        } 
     }
     function getBiggest(array){
         return Math.max.apply(Math, array);
